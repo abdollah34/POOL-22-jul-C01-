@@ -6,12 +6,15 @@
 /*   By: abagueri <abagueri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/08/13 10:47:43 by abagueri          #+#    #+#             */
-/*   Updated: 2024/08/13 12:54:52 by abagueri         ###   ########.fr       */
+/*   Updated: 2024/08/13 18:46:05 by abagueri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_is_prime(int nb)
 {
+	int	i;
+
+	i = 2;
 	if (nb < 2)
 		return (0);
 	while (i < nb)

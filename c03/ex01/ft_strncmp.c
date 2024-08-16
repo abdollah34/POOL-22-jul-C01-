@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abagueri <abagueri@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/11 18:46:16 by abagueri          #+#    #+#             */
-/*   Updated: 2024/08/13 18:03:05 by abagueri         ###   ########.fr       */
+/*   Created: 2024/08/05 12:03:52 by abagueri          #+#    #+#             */
+/*   Updated: 2024/08/09 19:43:55 by abagueri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_fibonacci(int index)
+int	ft_strncmp(char *s1, char *s2, unsigned int n)
 {
-	if (index == 1)
-		return (1);
-	if (index == 0)
-		return (0);
-	if (index < 0)
-		return (-1);
-	return (ft_fibonacci (index - 2) + ft_fibonacci(index - 1));
+	unsigned int	i;
+
+	i = 0;
+	while ((s1[i] != '\0' || s2[i] != '\0') && i < n)
+	{
+		if (s1[i] > s2[i])
+		{
+			return (1);
+		}
+		else if (s1[i] < s2[i])
+		{
+			return (-1);
+		}
+		i++;
+	}
+	return (0);
 }

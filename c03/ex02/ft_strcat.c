@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_find_next_prime.c                               :+:      :+:    :+:   */
+/*   ft_strcat.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: abagueri <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/08/13 19:17:48 by abagueri          #+#    #+#             */
-/*   Updated: 2024/08/13 19:28:34 by abagueri         ###   ########.fr       */
+/*   Created: 2024/08/05 12:13:16 by abagueri          #+#    #+#             */
+/*   Updated: 2024/08/09 19:44:46 by abagueri         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_find_next_prime(int nb)
+char	*ft_strcat(char *dest, char *src)
 {
-	int	y;
+	int	i;
+	int	j;
 
-	y = nb - 1;
-	while (y > 1)
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
 	{
-		if (nb % y == 0)
-		{
-			nb++;
-			y = nb;
-		}
-		y--;
+		i++;
 	}
-	return (nb);
+	while (src[j] != '\0')
+	{
+		dest[i] = src[j];
+		j++;
+		i++;
+	}
+	dest[i] = '\0';
+	return (dest);
 }
+//int main(void)
+//{
+// char	dest[50] = "hala";
+// char	src[] = "barca";
+//	printf("%s ",ft_strcat(dest, src));
+//}
